@@ -19,9 +19,9 @@ public class Main {
             return;
         }
 
-        System.out.println("------------- Array original embutido: -------------");
+        System.out.println("------------- Dados do próprio Sistema: -------------");
         printArray(arrayExemplo);
-        System.out.println("------------ Array original do arquivo: ------------");
+        System.out.println("------------ Dados do arquivo: ------------");
         printArray(arrayArquivo);
         System.out.println("");
 
@@ -34,8 +34,8 @@ public class Main {
         sortAndMeasureTime(arrayExemplo, arrayArquivo, "Selection Sort", executionTimesExample, executionTimesFile);
 
         System.out.println("\n------------- Comparação de desempenho: -------------");
-        displayFastestAndSlowestSort(executionTimesExample, "Array embutido");
-        displayFastestAndSlowestSort(executionTimesFile, "Array do arquivo");
+        displayFastestAndSlowestSort(executionTimesExample, "Dados do Sistema");
+        displayFastestAndSlowestSort(executionTimesFile, "Dados do arquivo");
     }
 
     public static void sortAndMeasureTime(int[] arrayExemplo, int[] arrayArquivo, String sortType,
@@ -47,17 +47,17 @@ public class Main {
         applySort(arrayExemploCopy, sortType);
         long endTimeExample = System.nanoTime();
         executionTimesExample.put(sortType, endTimeExample - startTimeExample);
-        System.out.println("Resultado do " + sortType + " no array embutido:");
+        System.out.println("Resultado do " + sortType + " no Dados Sistema:");
         printArray(arrayExemploCopy);
-        printExecutionTime("Array embutido", startTimeExample, endTimeExample);
+        printExecutionTime("Dados do Sistema", startTimeExample, endTimeExample);
 
         long startTimeFile = System.nanoTime();
         applySort(arrayArquivoCopy, sortType);
         long endTimeFile = System.nanoTime();
         executionTimesFile.put(sortType, endTimeFile - startTimeFile);
-        System.out.println("Resultado do " + sortType + " no array do arquivo:");
+        System.out.println("Resultado do " + sortType + " no Dados do arquivo:");
         printArray(arrayArquivoCopy);
-        printExecutionTime("Array do arquivo", startTimeFile, endTimeFile);
+        printExecutionTime("Dados do arquivo", startTimeFile, endTimeFile);
     }
 
     public static void applySort(int[] array, String sortType) {

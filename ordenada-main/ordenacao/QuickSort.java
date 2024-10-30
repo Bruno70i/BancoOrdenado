@@ -4,17 +4,19 @@ public class QuickSort {
 
     // Método para realizar o Quick Sort
     public static void quickSort(int[] array, int low, int high) {
+        // Se a posição inicial for menor que a final, significa que ainda há elementos para ordenar
         if (low < high) {
-            // Particiona o array
+            // Particiona o array e obtém o índice do pivô
             int pivotIndex = partition(array, low, high);
 
-            // Ordena as duas sub-listas
+            // Recursivamente ordena as duas metades ao redor do pivô
             quickSort(array, low, pivotIndex - 1);
             quickSort(array, pivotIndex + 1, high);
         }
     }
 
-    // Método de partição
+    // Método de partição: organiza o array de forma que elementos menores que o pivô fiquem à esquerda
+    // e os maiores à direita
     private static int partition(int[] array, int low, int high) {
         int pivot = array[high]; // Escolhe o último elemento como pivô
         int i = low - 1; // Índice do menor elemento
@@ -36,22 +38,5 @@ public class QuickSort {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
-    }
-
-    // Método principal para testar o Quick Sort
-    public static void main(String[] args) {
-        int[] array = {34, 7, 23, 32, 5, 62};
-        
-        System.out.println("Array original:");
-        for (int num : array) {
-            System.out.print(num + " ");
-        }
-
-        quickSort(array, 0, array.length - 1);
-
-        System.out.println("\nArray ordenado:");
-        for (int num : array) {
-            System.out.print(num + " ");
-        }
     }
 }

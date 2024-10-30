@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
         int[] arrayExemplo = {38, 27, 43, 3, 9, 82, 10, 8, 22, 55};
-        int[] arrayArquivo = readValuesFromFile("C:\\Users\\bruno\\Documents\\GitHub\\BancoOrdenado\\ordenada-main\\ordenacao\\valores_externos_0_a_100000.txt");
+        int[] arrayArquivo = readValuesFromFile("C:\\Users\\bruno\\Documents\\GitHub\\BancoOrdenado\\ordenada-main\\ordenacao\\valores_externos_0_a_1000.txt");
 
         if (arrayArquivo.length == 0) {
             System.out.println("Erro: O array do arquivo está vazio. Verifique o caminho e o conteúdo do arquivo.");

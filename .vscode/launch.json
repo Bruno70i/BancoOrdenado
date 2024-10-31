@@ -1,0 +1,37 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "GUI",
+            "request": "launch",
+            "mainClass": "BancoOrdenado/ordenacao.GUI",
+            "projectName": "BancoOrdenado_831f15d0"
+        },
+        {
+            "type": "java",
+            "name": "GUI",
+            "request": "launch",
+            "mainClass": "BancoOrdenado/ordenacao.GUI",
+            "projectName": "BancoOrdenado_855a0d92"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "GUI",
+            "request": "launch",
+            "mainClass": "ordenacao/ordenacao.GUI",
+            "vmArgs": "--add-modules java.desktop",
+            "projectName": "BancoOrdenado_855a0d92"
+        }
+    ]
+}
+

@@ -4,5 +4,7 @@
 /**
  * 
  */
-module ordenacao {
+module BancoOrdenado {
+    requires java.desktop;
+    exports ordenacao;
 }
